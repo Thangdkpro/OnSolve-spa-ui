@@ -1,0 +1,19 @@
+@import '../common';
+.table {
+  width: 100%;
+  min-width: 500px;
+  
+  &--bordered{
+    border: 1px solid #ddd;
+  }
+  &--bottom-bordered tr{
+    border-bottom: 1px solid #eee;
+  }
+  &>tbody>tr:hover {
+    background: whitesmoke;
+  }
+  td , th {
+    padding: 10px;
+  }
+}
+

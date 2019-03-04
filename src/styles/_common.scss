@@ -1,0 +1,72 @@
+.container{
+  width: 80%;
+  margin: 0px auto;
+  padding: 40px;
+}
+.limit-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 10px;
+}
+.letter-uppercase{
+  text-transform: uppercase;
+}
+.overflow-auto{
+  overflow: auto;
+}
+.role-button{
+  outline: none;
+  cursor: pointer;
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.display-inline{
+  display: inline-block;
+}
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.clear-fix{
+  display: block;
+  clear: both;
+}
+.upper-first-letter {
+  text-transform: capitalize;
+}
+
+@mixin mg-left($space){
+  margin-left: $space;
+}
+
+@mixin mg-right($space){
+  margin-right: $space;
+}
+
+@mixin mg-top($space){
+  margin-top: $space;
+}
+
+@mixin mg-bottom($space){
+  margin-bottom: $space;
+}
+
+.content-box{
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+              

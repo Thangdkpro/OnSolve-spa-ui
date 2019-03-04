@@ -1,0 +1,7 @@
+@import '../../styles/_common.scss';
+
+.content{
+  composes: text-center;
+  @include mg-top(20px);
+  @include mg-bottom(20px);
+}

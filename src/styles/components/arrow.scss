@@ -1,0 +1,45 @@
+@import '../common';
+
+.content-arrow{
+  content: "";
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.down-arrow {
+  composes: content-arrow;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid #666;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  @include mg-top(5px);
+}
+
+.up-arrow {
+  composes: content-arrow;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid  #666;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.left-arrow {
+  composes: content-arrow;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-right: 6px solid #666;
+}
+
+.right-arrow {
+  composes: content-arrow;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid #666;
+  border-right: 6px solid transparent;
+}
+
+.arrow-disabled{
+  visibility: hidden;
+}

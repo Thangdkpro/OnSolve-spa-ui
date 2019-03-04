@@ -1,0 +1,39 @@
+@import '../../../styles/components/table.scss';
+@import '../../../styles/components/arrow.scss';
+@import '../../../styles/_common.scss';
+
+.button-delete-style{
+  composes: pull-left;
+  @include mg-left(10px);
+}
+
+.button-sort-increase{
+  composes: up-arrow;
+  composes: role-button;
+}
+
+.button-sort-decrease{
+  composes: down-arrow;
+  composes: role-button;
+}
+
+.row-type{
+  background: #729F96;
+  color: white;
+  text-transform: uppercase;
+}
+.arrow-disabled{
+  color: #ddd;
+}
+tbody > tr:nth-child(odd){
+  background-color: #F7F7F7;
+}
+.action-buttons{
+  composes: pull-left;
+  display: flex;
+  @include mg-left(10px);
+}
+.imgFm{
+  height: 100px;
+  width: 100px;
+}

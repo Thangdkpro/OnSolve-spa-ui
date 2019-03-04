@@ -1,0 +1,12 @@
+@import '../../components/Panel/panel.scss';
+
+.button-create{
+  composes: pull-right;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.panel{
+  composes: panel;
+  clear: both;
+}

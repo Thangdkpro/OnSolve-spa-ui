@@ -1,0 +1,92 @@
+@import '../_colors';
+
+.btn {
+    padding: .375rem .75rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: inline-block;
+    outline: none;
+    border: 0.5px solid whitesmoke;
+    cursor: pointer;
+    
+    &--primary {
+      background-color: $primary;
+      color: white;
+    }
+    
+    &--danger {
+      background-color: $danger;
+      color: white;
+    }
+
+    &--warning {
+        background-color: $warning;
+        color: white;
+    }
+
+    &--gradient {
+        background: $gradient;
+        color: white;
+    }
+
+    &--outline {
+      border: 0.5px $primary solid;
+      color: $primary;
+      background: transparent;
+    }
+
+    &--borderless {
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+    }
+
+    &--edit {
+      background-color: $edit-button;
+      color:white;
+    }
+
+    &--strong {
+      font-weight: bold;
+    }
+
+    &--no-padding {
+      padding: 0;
+    }
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn--primary {
+  composes: btn;
+  composes: btn--primary;
+}
+
+.btn--outline {
+  composes: btn;
+  composes: btn--outline;
+}
+
+.btn--warning {
+  composes: btn;
+  composes: btn--warning;
+}
+
+.btn--danger {
+  composes: btn;
+  composes: btn--danger;
+}
+
+.btn--edit {
+  composes: btn;
+  composes: btn--edit;
+}
+
+.btn--borderless-strong {
+  composes: btn;
+  composes: btn--borderless;
+  composes: btn--strong;
+  composes: btn--no-padding;
+}

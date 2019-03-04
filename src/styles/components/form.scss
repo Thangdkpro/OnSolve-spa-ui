@@ -1,0 +1,27 @@
+@import '../_colors';
+
+.form-input {
+    padding: .375rem .75rem;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    border: 0.5px solid $border;
+    height: 2rem;
+}
+.color-red{
+    color: red;
+}
+.textarea-input{
+    padding: .375rem .75rem;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    border: 0.5px solid $border;
+}
+label {
+    padding-right: 0.5rem;
+}
+
+.error {
+  color: $error-field;
+}

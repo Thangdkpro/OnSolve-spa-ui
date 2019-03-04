@@ -1,0 +1,21 @@
+@import '../../styles/_colors.scss';
+
+.header{
+  background: rgb(21, 66, 48);
+  color: white;
+  height: 60px;
+  padding: 20px;
+  &-left{
+    float: left;
+    width: 30%;
+  }
+  &-right{
+    float: right;
+  };
+  img{
+    margin-top: 2%;
+  }
+}
+.img{
+  margin-top : 0%;
+}

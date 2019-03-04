@@ -1,0 +1,17 @@
+@import '../Panel/panel.scss';
+
+.title-bar{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.title-bar-left{
+  composes: pull-left;
+  font-size: 18px;
+}
+
+.title-bar-right{
+  composes: pull-right;
+}

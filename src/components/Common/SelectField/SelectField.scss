@@ -1,0 +1,7 @@
+@import '../../../styles/components/form.scss';
+@import '../../../styles/components/grid.scss';
+
+.input-style {
+  composes: col;
+  composes: form-input;
+}
