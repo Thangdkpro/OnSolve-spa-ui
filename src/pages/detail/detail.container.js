@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PropType from 'prop-types';
 import Header from '../../components/Header/Header';
-import { homepageSelector } from '../../modules/homepage/homepage.selector';
+import { fetchMarvelHero } from '../../modules/detail/detail.action';
+import { detailSelector } from '../../modules/detail/detail.selector';
 import Styles from './detail.scss';
 import Panel from '../../components/Panel/Panel';
 import PanelTitle from '../../components/Panel/panelTitle/PanelTitle';
 import Content from '../../components/Content/Content';
-import DetailView from './detail.view';
+import DetailBranch from './detail.branch';
 
 class Detail extends Component {
   static propTypes = {
-    homepage: PropType.object.isRequired,
+    detail: PropType.object.isRequired,
+    fetchMarvelHero: PropType.func.isRequired,
+    match: PropType.object.isRequired,
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { heroId: this.props.match.params.heroId };
+  }
+
+  componentDidMount() {
+    this.props.fetchMarvelHero(this.state.heroId);
   }
 
   render() {
@@ -21,7 +34,6 @@ class Detail extends Component {
         {title}
       </PanelTitle>
     );
-
     return (
       <div>
         <Header title={title} />
@@ -31,18 +43,24 @@ class Detail extends Component {
             panelClass={Styles.panel}
             leftComp={panelTitleComp}
           >
-            <DetailView {...this.props.homepage} />
+            <DetailBranch {...this.props.detail} />
           </Panel>
         </Content>
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    homepage: homepageSelector(state),
+    fetchMarvelHero: fetchMarvelHero(dispatch),
   };
 };
 
-export default connect(mapStateToProps)(Detail);
+const mapStateToProps = (state) => {
+  return {
+    detail: detailSelector(state),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Detail));
 

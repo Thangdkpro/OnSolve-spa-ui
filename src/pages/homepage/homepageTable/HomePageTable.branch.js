@@ -8,9 +8,7 @@ import HomePageTableView from './HomePageTable.view';
 class HomePageBranch extends Component {
   static propTypes = {
     fetchStatus: propTypes.number.isRequired,
-    // searchStatus: propTypes.number.isRequired,
     marvelHeroList: propTypes.object.isRequired,
-    // searchResultList: propTypes.array.isRequired,
   };
   render() {
     const {
@@ -21,11 +19,6 @@ class HomePageBranch extends Component {
       return <LoadingView content="Loading" />;
     } else if (fetchStatus === 3 && marvelHeroList) {
       const data = marvelHeroList.data.results;
-      // if (searchResultList.length > 0) {
-      //   data = searchResultList;
-      // } else if (searchStatus !== status.notStart && searchStatus !== status.fail) {
-      //   data = [];
-      // }
       return <HomePageTableView data={data} />;
     }
     return <ErrorView content="Data is not found. Please try again !" />;
