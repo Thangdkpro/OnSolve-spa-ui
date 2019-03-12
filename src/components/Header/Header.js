@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import { logout } from '../../modules/login/login.action';
 import Styles from './header.scss';
 import NavBar from '../NavBar/NavBar';
-import logo from '../../public/logo.png';
+// import logo from '../../public/logo.png';
+import marvelIcon from '../../public/marvelIcon.png';
 
 class Header extends Component {
   render() {
     return (
       <header className={Styles.header}>
         <div className={Styles.headerLeft}>
-          <img src={logo} alt="logo" height="20%" width="20%" className={Styles.img} />
+          <img src={marvelIcon} alt="logo" className={Styles.marvelLogo} />
         </div>
         <div className={Styles.headerRight}>
           <NavBar />

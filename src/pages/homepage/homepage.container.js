@@ -5,12 +5,15 @@ import { fetchMarvelHeroList } from '../../modules/homepage/homepage.action';
 import HomePageTableBranch from '../homepage/homepageTable/HomePageTable.branch';
 import { homepageSelector } from '../../modules/homepage/homepage.selector';
 import Header from '../../components/Header/Header';
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
 import Styles from './homepage.scss';
 import TitleBar from '../../components/TitleBar/TitleBar';
 import Panel from '../../components/Panel/Panel';
 import PanelTitle from '../../components/Panel/panelTitle/PanelTitle';
+import Slider from '../../components/Slider/Slider';
 
 import Content from '../../components/Content/Content';
+import Characters from '../../components/Characters/Characters';
 
 class HomePage extends Component {
   static propTypes = {
@@ -44,6 +47,9 @@ class HomePage extends Component {
     return (
       <div>
         <Header title={title} />
+        <MenuHeader />
+        <Slider />
+        <Characters />
         <Content>
           <TitleBar leftComp={titleBarComp} />
           <Panel

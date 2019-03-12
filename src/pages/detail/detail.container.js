@@ -10,6 +10,7 @@ import Panel from '../../components/Panel/Panel';
 import PanelTitle from '../../components/Panel/panelTitle/PanelTitle';
 import Content from '../../components/Content/Content';
 import DetailBranch from './detail.branch';
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
 
 class Detail extends Component {
   static propTypes = {
@@ -37,6 +38,7 @@ class Detail extends Component {
     return (
       <div>
         <Header title={title} />
+        <MenuHeader />
         <Content>
           <Panel
             title={title}

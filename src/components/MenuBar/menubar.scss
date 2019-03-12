@@ -1,0 +1,17 @@
+ul.menu-bar{
+    list-style-type: none;
+    li{
+      font-size: 90%;
+      border: white 0.5px;
+      display: inline-block;
+      margin: 0 20px;
+      &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      a{
+        color: white;
+      }
+    }
+  
+  }

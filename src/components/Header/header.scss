@@ -1,7 +1,7 @@
 @import '../../styles/_colors.scss';
 
 .header{
-  background: rgb(21, 66, 48);
+  background: #222529;
   color: white;
   height: 60px;
   padding: 20px;
@@ -13,9 +13,12 @@
     float: right;
   };
   img{
-    margin-top: 2%;
+    padding: 0px;
+    display: inline-block;
+    margin: -20px 0px 0px 150%;
   }
 }
-.img{
-  margin-top : 0%;
+.marvelLogo{
+  height: 60px;
+  width: 120px;
 }

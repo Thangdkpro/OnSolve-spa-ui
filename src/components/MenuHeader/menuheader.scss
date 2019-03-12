@@ -1,0 +1,13 @@
+@import '../../styles/_colors.scss';
+
+.header{
+  border: solid gray 0.5px;
+  background: #222529;
+  height: 60px;
+  padding: 20px;
+  &-left{
+    float: left;
+    margin-left: 30%;
+  }
+
+}
