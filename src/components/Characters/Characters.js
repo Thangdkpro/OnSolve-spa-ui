@@ -25,11 +25,11 @@ export default class Characters extends Component {
       },
       {
         image: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_ons_crd_03_1.jpg',
-        title: 'NICK FURY',
+        title: 'CONLSON',
       },
       {
         image: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/284nfy_ons_crd_01.jpg',
-        title: 'CONLSON',
+        title: 'NICK FURY',
       },
     ],
     };

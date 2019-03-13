@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import React, { Component } from 'react';
 import * as propTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -41,11 +42,12 @@ export class Login extends Component {
     const { getFieldDecorator } = this.props.form;
     // Default account is admin/admin
     return (
-      <div className="login">
-        <h1>LOGIN TO YOUR ACCOUNT</h1>
-        <Form onSubmit={this.handleSubmit} className="login-form">
-          <FormItem>
-            {getFieldDecorator('username', {
+      <div className="loginWrapper">
+        <div className="login">
+          <h1>SIGN IN</h1>
+          <Form onSubmit={this.handleSubmit} className="login-form">
+            <FormItem>
+              {getFieldDecorator('username', {
               rules: [{ required: true, message: 'Please input your username!' }],
             })(<Input
               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -53,9 +55,9 @@ export class Login extends Component {
               className="login-input"
             />)
             }
-          </FormItem>
-          <FormItem>
-            {getFieldDecorator('password', {
+            </FormItem>
+            <FormItem>
+              {getFieldDecorator('password', {
               rules: [{ required: true, message: 'Please input your Password!' }],
             })(<Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -63,12 +65,13 @@ export class Login extends Component {
               placeholder="Password"
               className="login-input"
             />)}
-          </FormItem>
-          <Button type="primary" htmlType="submit" className="login-form-button">
-            Login
+            </FormItem>
+            <Button type="primary" htmlType="submit" className="login-form-button">
+            Sign In
           </Button>
-        </Form>
-        <h3>{this.renderError()}</h3>
+          </Form>
+          <h3>{this.renderError()}</h3>
+        </div>
       </div>
     );
   }

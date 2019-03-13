@@ -31,7 +31,7 @@ class HomePage extends Component {
   }
 
   render() {
-    const title = 'All Marvels Hero';
+    const title = 'Marvel Heros';
     const panelTitleComp = (
       <PanelTitle>
         {title}
