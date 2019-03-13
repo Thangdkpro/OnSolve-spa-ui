@@ -8,8 +8,7 @@
   width: 500px;
   background-color: white;
   margin: 15% auto;
-
-
+  opacity: 0.8;
 }
 .login h1 {
   text-align: left;
