@@ -1,0 +1,18 @@
+.pagination {
+    display: inline-block;
+    margin: auto 30%;
+    min-width: 500px;
+    &number{
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+  }
+  
+  .pagination div {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }

@@ -14,6 +14,8 @@ import Slider from '../../components/Slider/Slider';
 
 import Content from '../../components/Content/Content';
 import Characters from '../../components/Characters/Characters';
+import Pagination from '../../components/Pagination/Pagination';
+
 
 class HomePage extends Component {
   static propTypes = {
@@ -22,10 +24,27 @@ class HomePage extends Component {
     history: object.isRequired,
 
   }
+  constructor(props) {
+    super(props);
+    this.state = ({
+      pageNumber: 1,
+    });
+  }
 
   componentDidMount() {
-    this.props.fetchMarvelHeroList();
+    this.props.fetchMarvelHeroList(0);
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.homepage.fetchStatus === 3) {
+      const { total } = nextProps.homepage.marvelHeroList.data;
+      const page = (total % 20 === 0) ? total / 20 : (total / 20) + 1;
+      this.setState({
+        pageNumber: page,
+      });
+    }
+  }
+
   navigateDetailHero = (url) => {
     return this.props.history.replace(url);
   }
@@ -58,6 +77,7 @@ class HomePage extends Component {
             leftComp={panelTitleComp}
           >
             <HomePageTableBranch {...this.props.homepage} />
+            <Pagination onClick={this.props.fetchMarvelHeroList} pageNumber={this.state.pageNumber} />
           </Panel>
         </Content>
       </div>
